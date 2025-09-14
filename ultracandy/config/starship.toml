@@ -1,0 +1,101 @@
+# Starship Configuration for HyprCandy
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$nodejs\
+$python\
+$rust\
+$golang\
+$php\
+$java\
+$kotlin\
+$haskell\
+$swift\
+$cmd_duration $jobs $time\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = true
+truncation_length = 3
+
+[git_branch]
+symbol = "🌿 "
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕${ahead_count}⇣${behind_count} "
+stashed = "📦 "
+modified = "✏️  "
+staged = "🗂️  "
+renamed = "🔀 "
+deleted = "🗑️  "
+untracked = "✨ "
+format = "([$all_status$ahead_behind]($style)) "
+
+[git_metrics]
+disabled = false
+
+[cmd_duration]
+format = "⏱️ [$duration]($style) "
+style = "yellow"
+min_time = 1000
+
+[time]
+disabled = false
+time_format = "%T"
+style = "bold green"
+format = "🕒 [$time]($style) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[nodejs]
+format = "⬢ [$version](bold green) "
+
+[python]
+format = "🐍 [$version]($style) "
+style = "bold yellow"
+
+[rust]
+format = "🦀 [$version]($style) "
+style = "bold red"
+
+[golang]
+format = "🐹 [$version]($style) "
+style = "bold cyan"
+
+[php]
+format = "🐘 [$version]($style) "
+style = "bold blue"
+
+[java]
+format = "☕ [$version]($style) "
+style = "bold red"
+
+[kotlin]
+format = "🅺 [$version]($style) "
+style = "bold purple"
+
+[haskell]
+format = "λ [$version]($style) "
+style = "bold purple"
+
+[swift]
+format = "🧡 [$version]($style) "
+style = "bold bright-red"

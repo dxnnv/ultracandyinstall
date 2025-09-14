@@ -1,0 +1,9 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "modules-left": ["workspaces"],
+  "modules-center": ["window"],
+  "modules-right": ["cpu", "temperature", "battery", "network", "clock"],
+  "$schema": "https://raw.githubusercontent.com/Alexays/Waybar/master/resources/schemas/config.schema.json"
+}
